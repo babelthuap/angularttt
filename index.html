@@ -9,7 +9,7 @@
   <script src="app.js"></script>
 </head>
 
-<body ng-app="ticTacToe">
+<body ng-app="TicTacToe">
   <h1>Angular Tic-Tac-Toe</h1>
   <i>by <a href="https://babelthuap.github.io/">Nicholas Neumann-Chun</a></i>
   <hr>
@@ -19,7 +19,8 @@
     <table id="board">
       <tbody>
         <tr ng-repeat="row in board track by $index">
-          <td ng-repeat="square in row track by $index" ng-click="handleClick($parent.$index, $index)">
+          <td ng-repeat="square in row track by $index"
+              ng-click="handleClick($parent.$index, $index)">
             {{square}}
           </td>
         </tr>
@@ -27,9 +28,7 @@
     </table>
 
     <h2 class="game-indicator" ng-show="gameRunning">{{whoseTurn}}'s Turn</h2>
-
     <h2 class="game-indicator" ng-hide="gameRunning">{{endGameMessage}}</h2>
-
     <button ng-hide="gameRunning" ng-click="newGame()">Restart!</button>
 
   </div>

@@ -1,7 +1,7 @@
 !function() {
   'use strict';
 
-  var app = angular.module('ticTacToe', []);
+  var app = angular.module('TicTacToe', []);
 
   app.controller('gameCtrl', function($scope) {
     $scope.newGame = function() {
