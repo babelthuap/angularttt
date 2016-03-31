@@ -1,7 +1,6 @@
 'use strict';
 
-const addsrc     = require('gulp-add-src')
-    , babel      = require('gulp-babel') // also need babel-preset-es2015
+const babel      = require('gulp-babel') // also need babel-preset-es2015
     , cleanCSS   = require('gulp-clean-css')
     , concat     = require('gulp-concat')
     , gulp       = require('gulp')
@@ -29,10 +28,12 @@ gulp.task('build', ['clean'], function() {
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(paths.dest))
+    .on('error', gutil.log);
   gulp.src(paths.cssSrc)
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest(paths.dest));
+    .pipe(gulp.dest(paths.dest))
+    .on('error', gutil.log);
 });
 
 gulp.task('clean', function(cb) {
