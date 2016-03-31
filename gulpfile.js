@@ -10,9 +10,9 @@ const babel      = require('gulp-babel') // also need babel-preset-es2015
     , uglify     = require('gulp-uglify');
 
 const paths = {
-  fileSrc: 'source/*',
-  jsSrc: 'source/*.js',
-  cssSrc: 'source/*.css',
+  fileSrc: 'source/**/*',
+  jsSrc: 'source/**/*.js',
+  cssSrc: 'source/**/*.css',
   dest: 'public',
 }
 
