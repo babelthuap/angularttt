@@ -1,5 +1,5 @@
 body {
-  background-color: #DFD;
+  background-color: #dfd;
   font-family: monospace;
   text-align: center;
 }
@@ -14,7 +14,7 @@ hr {
 }
 
 #board td {
-  background-color: #BBB;
+  background-color: #bbb;
   border: 1px solid #000;
   cursor: pointer;
   font-size: 64px;
@@ -23,7 +23,7 @@ hr {
 }
 
 #board td:hover {
-  background-color: #AAA;
+  background-color: #aaa;
 }
 
 .game-indicator {
