@@ -26,10 +26,12 @@
       </tbody>
     </table>
 
-    <h2 class="turn-indicator">{{turnIndicator}}</h2>
+    <h2 class="game-indicator" ng-show="gameRunning">{{whoseTurn}}'s Turn</h2>
+
+    <h2 class="game-indicator" ng-hide="gameRunning">{{endGameMessage}}</h2>
 
     <button ng-hide="gameRunning" ng-click="newGame()">Restart!</button>
-    
+
   </div>
 </body>
 
