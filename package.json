@@ -1,7 +1,7 @@
 {
   "name": "angularttt",
   "version": "1.0.0",
-  "description": "",
+  "description": "basic tictactoe using Angular",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -16,9 +16,10 @@
     "rimraf": "^2.5.2"
   },
   "scripts": {
+    "setup": "npm i && bower i && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Nicholas Neumann-Chun",
-  "license": "ISC"
+  "author": "Nicholas Neumann-Chun <nicholas.babelthuap@gmail.com>",
+  "license": "MIT"
 }
