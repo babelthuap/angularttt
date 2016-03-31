@@ -3,19 +3,33 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Tic-Tac-Toe</title>
+  <title>Angular Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css">
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
 
 <body ng-app="ticTacToe">
-  <h1>Tic-Tac-Toe</h1>
-  <p><i>by <a href="https://babelthuap.github.io/">Nicholas Neumann-Chun</a></i></p>
+  <h1>Angular Tic-Tac-Toe</h1>
+  <i>by <a href="https://babelthuap.github.io/">Nicholas Neumann-Chun</a></i>
   <hr>
 
-  <div id="gameboard" ng-controller="gameCtrl">
-    <p>answer = {{answer}}</p>
+  <div id="game" ng-controller="gameCtrl">
+
+    <table id="board">
+      <tbody>
+        <tr ng-repeat="row in board track by $index">
+          <td ng-repeat="square in row track by $index" ng-click="handleClick($parent.$index, $index)">
+            {{square}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="turn-indicator">{{turnIndicator}}</h2>
+
+    <button ng-hide="gameRunning" ng-click="newGame()">Restart!</button>
+    
   </div>
 </body>
 

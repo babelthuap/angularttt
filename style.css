@@ -1,5 +1,35 @@
 body {
-  text-align: center;
+  background-color: #DFD;
   font-family: monospace;
-  background-color: #E0E0FF;
+  text-align: center;
+}
+
+hr {
+  margin: 1em;
+}
+
+#board {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+#board td {
+  background-color: #BBB;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 64px;
+  height: 100px;
+  width: 100px;
+}
+
+#board td:hover {
+  background-color: #AAA;
+}
+
+.turn-indicator {
+  color: white;
+  text-shadow: 1px 1px 1px #000,
+               -1px -1px 1px #000,
+               -1px 1px 1px #000,
+               1px -1px 1px #000;
 }
